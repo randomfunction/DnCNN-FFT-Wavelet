@@ -38,8 +38,8 @@ We introduce **FFT-based token mixing** inside convolutional layers to allow the
 
 | Model            | PSNR ↑  | SSIM ↑ |
 |------------------|---------|--------|
-| DnCNN (Baseline) | XX.XX dB | 0.XXXX |
-| DnCNN + FNet     | XX.XX dB | 0.XXXX |
+| DnCNN (Baseline) | 27.93 dB | 0.8975 |
+| DnCNN + FNet     | 28.26 dB | 0.9047 |
 
 ---
 
