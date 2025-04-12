@@ -45,6 +45,6 @@ We introduce **FFT-based token mixing** inside convolutional layers to allow the
 
 ## Author -
 
-Your Tanishq Parihar
-Contact: tanishqparihar3@gmail.com
-GitHub: randomfunction
+- Tanishq Parihar
+- Contact: tanishqparihar3@gmail.com
+- GitHub: randomfunction
