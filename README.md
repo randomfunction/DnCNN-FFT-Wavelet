@@ -1,54 +1,23 @@
-# Image Denoising using DnCNN (Baseline & FNet-Attention Enhanced)
+# Hybrid Image Denoising using DnCNN, FNet, and Wavelet Transforms
 
-This repository contains two implementations of the classic **DnCNN (Denoising Convolutional Neural Network)** model:
+This project implements advanced image denoising models based on DnCNN, with enhancements using **Wavelet Transforms** and **FFT-based Attention (FNet)**. It explores hybrid architectures for improving denoising performance on noisy images.
 
-1. **Standard DnCNN** - Based on the original 2017 paper for Gaussian noise removal.
-2. **DnCNN + FNet Attention** - Our custom enhancement using **FFT-based attention** inspired by FNet, improving denoising performance via frequency domain mixing.
 
----
+## Model Architectures
 
-## What is DnCNN?
+### 1. **DnCNN (Baseline)**
+- Deep convolutional network with residual learning.
+- Learns to predict noise from corrupted images.
 
-DnCNN is a deep CNN model that performs **residual learning** for image denoising. It predicts the noise from a noisy image and subtracts it to recover the clean image.
+### 2. **DnCNN + Wavelet**
+- Adds Discrete Wavelet Transform (DWT) preprocessing.
+- Enhances noise separation by working in frequency domain.
 
-> 📄 Paper: [Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising (2017)](https://arxiv.org/abs/1608.03981)
+### 3. **HybridTriBranchModel**
+- Combines three branches:
+  - Standard DnCNN
+  - DWT + DnCNN
+  - FNet (FFT-based self-attention)
+- Merges outputs for robust denoising under various noise types.
 
----
 
-## What's New? (FNet-style Enhancement)
-
-We introduce **FFT-based token mixing** inside convolutional layers to allow the model to capture **global context** more efficiently.
-
-### Why FNet?
-
-- Lower computational cost than self-attention
-- Leverages frequency-domain patterns
-- Helps the CNN focus on structured noise
-
----
-
-## Evaluation Metrics
-
-- **PSNR (Peak Signal-to-Noise Ratio)**
-- **SSIM (Structural Similarity Index)**
-
----
-
-## Results
-
-| Model            | PSNR ↑  | SSIM ↑ |
-|------------------|---------|--------|
-| DnCNN (Baseline) | 27.93 dB | 0.8975 |
-| DnCNN + FNet     | 28.26 dB | 0.9047 |
-
----
-
-## Author -
-
-**Tanishq Parihar**  
-📧 tanishqparihar3@gmail.com  
-🔗 GitHub: [randomfunction](https://github.com/randomfunction)
-
----
-
-⭐ If you found this useful, consider giving a star to the repo!
